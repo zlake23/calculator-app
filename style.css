@@ -2,29 +2,41 @@ button {
     background-color: #DFDFDF;
     
 }
+.clear, .clear-all {
+    background: #41403E;    
+    color: rgb(255, 255, 255);    
+    font-size: 2rem;    
+    width: 125px;    
+    height: 50px;    
+    outline: none;    
+    border-radius: 40%;    
+    border: solid 7px rgb(104, 92, 67);    
+    flex: 1;    
+    transition: all .5s ease;
+}
 
 .number {
     background: transparent;    
     color: #41403E;    
     font-size: 2rem;    
     width: 75px;    
-    height: 75px;    
+    height: 55px;    
     outline: none;    
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;    
+    border-radius: 50%;    
     border: solid 7px #41403E;    
     flex: 1;    
     transition: all .5s ease;
 }
 
 .operator {
-    background: transparent;    
-    color: #41403E;    
+    background: #41403E;    
+    color: rgb(255, 255, 255);
     font-size: 2rem;    
     width: 75px;    
-    height: 75px;    
+    height: 50px;    
     outline: none;    
-    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;    
-    border: solid 7px #41403E;    
+    border-radius: 50%;    
+    border: solid 7px rgb(104, 92, 67);    
     flex: 1;    
     transition: all .5s ease;
 }
