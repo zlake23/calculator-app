@@ -1,0 +1,30 @@
+button {
+    background-color: #DFDFDF;
+    
+}
+
+.number {
+    background: transparent;    
+    color: #41403E;    
+    font-size: 2rem;    
+    width: 75px;    
+    height: 75px;    
+    outline: none;    
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;    
+    border: solid 7px #41403E;    
+    flex: 1;    
+    transition: all .5s ease;
+}
+
+.operator {
+    background: transparent;    
+    color: #41403E;    
+    font-size: 2rem;    
+    width: 75px;    
+    height: 75px;    
+    outline: none;    
+    border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;    
+    border: solid 7px #41403E;    
+    flex: 1;    
+    transition: all .5s ease;
+}
