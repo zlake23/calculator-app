@@ -1,42 +1,12 @@
-button {
-    background-color: #DFDFDF;
-    
-}
-.clear, .clear-all {
-    background: #41403E;    
-    color: rgb(255, 255, 255);    
-    font-size: 2rem;    
-    width: 125px;    
-    height: 50px;    
-    outline: none;    
-    border-radius: 40%;    
-    border: solid 7px rgb(104, 92, 67);    
-    flex: 1;    
-    transition: all .5s ease;
+body {
+    background-color: rgb(200, 150, 100);
 }
 
-.number {
-    background: transparent;    
-    color: #41403E;    
-    font-size: 2rem;    
-    width: 75px;    
-    height: 55px;    
-    outline: none;    
-    border-radius: 50%;    
-    border: solid 7px #41403E;    
-    flex: 1;    
-    transition: all .5s ease;
-}
-
-.operator {
-    background: #41403E;    
-    color: rgb(255, 255, 255);
-    font-size: 2rem;    
-    width: 75px;    
-    height: 50px;    
-    outline: none;    
-    border-radius: 50%;    
-    border: solid 7px rgb(104, 92, 67);    
-    flex: 1;    
-    transition: all .5s ease;
+.calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
 }
