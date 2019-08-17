@@ -84,6 +84,10 @@ body {
     font-size: 1rem;
 }
 
+.calc-on:hover {
+    background: #453421;
+}
+
 .clear-button {
     background: #545454;
     border: solid 3px #4b2c09;
@@ -93,6 +97,11 @@ body {
     border-radius: 15%;
     margin: 3px;
     flex: 1;
+}
+
+.clear-button:hover {
+    background: #fdfdfd;
+    color: #444444;
 }
 
 .clear-all-button {
@@ -106,6 +115,11 @@ body {
     flex: 1;
 }
 
+.clear-all-button:hover {
+    background: #fdfdfd;
+    color: #444444;
+}
+
 .number {
     background: #dddddd;
     border: solid 3px #4b2c09;
@@ -114,6 +128,10 @@ body {
     border-radius: 25%;
     margin: 3px;
     flex: 1;
+}
+
+.number:hover {
+    background: #444444;
 }
 
 .operator {
@@ -126,6 +144,13 @@ body {
     margin: 3px;
     flex: 1;
 }
+.operator:hover {
+    background: #4b2c09;
+}
+
+
+
+
 
 
 /*FlEX STYLES*/
