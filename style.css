@@ -23,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background: #ababab;
     max-height: 650px;
     max-width: 400px;
     width: 90%;
@@ -63,9 +64,76 @@ body {
     border: solid 3px #441111;
     padding: 5px;
     border-radius: 100px 25px;
-    width: 250px;
+    width: 300px;
     padding: 6px;
     margin: 5px;
     text-align: center;
     font-weight: bold;
+    
+}
+
+.calc-on {
+    border: none;
+    color: #fdfdfd;
+    background: #444444;
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    padding: 5px;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.clear-button {
+    background: #545454;
+    border: solid 3px #4b2c09;
+    color: #fdfdfd;
+    height: 45px;
+    width: 90px;
+    border-radius: 15%;
+    margin: 3px;
+    flex: 1;
+}
+
+.clear-all-button {
+    background: #545454;
+    border: solid 3px #4b2c09;
+    color: #fdfdfd;
+    height: 45px;
+    width: 90px;
+    border-radius: 15%;
+    margin: 3px;
+    flex: 1;
+}
+
+.number {
+    background: #dddddd;
+    border: solid 3px #4b2c09;
+    height: 45px;
+    width: 75px;
+    border-radius: 25%;
+    margin: 3px;
+    flex: 1;
+}
+
+.operator {
+    background: #435023;
+    border: solid 3px #453421;
+    color: #fdfdfd;
+    height: 45px;
+    width: 75px;
+    border-radius: 25%;
+    margin: 3px;
+    flex: 1;
+}
+
+
+/*FlEX STYLES*/
+
+.content-row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;    
 }
