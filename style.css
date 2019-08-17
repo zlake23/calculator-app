@@ -56,3 +56,16 @@ body {
     font-size: 2rem;
     overflow: hidden;
 }
+
+.calc-brand {
+    background: #441111;
+    color: #fdfdfd;
+    border: solid 3px #441111;
+    padding: 5px;
+    border-radius: 100px 25px;
+    width: 250px;
+    padding: 6px;
+    margin: 5px;
+    text-align: center;
+    font-weight: bold;
+}
