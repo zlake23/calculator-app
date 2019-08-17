@@ -79,9 +79,8 @@ body {
     height: 45px;
     width: 45px;
     border-radius: 50%;
-    padding: 5px;
     text-align: center;
-    font-size: 1rem;
+    font-size: 10px;
 }
 
 .calc-on:hover {
