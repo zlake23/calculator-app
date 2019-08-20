@@ -1,3 +1,5 @@
+
+//declares variables for each button type
 var calcNumBtns = document.getElementsByClassName('number-btn');
 var calcOperBtns = document.getElementsByClassName('operator-btn');
 
@@ -6,10 +8,38 @@ var clearBtn = document.getElementById('calc-clear');
 var deleteBtn = document.getElementById('calc-delete');
 var displayValElement = document.getElementById('calc-display-val');
 
+//sets initial values to begin calculations
+var displayVal = '0';
+var pendingVal;
+var evalStringArray = [];
+
+
+//updates calculator screen each time button is clicked to display value
+var updateDisplayVal = (clickBtn) => {
+    var btnText = clickBtn.target.innerText;
+
+    if(displayVal === '0') {
+        displayVal = '';
+    }
+
+    displayVal += btnText;
+    displayValElement.innerText = displayVal;
+}
+
+//iterates through all number button variables to send value of button to calculator display
 for (let i=0; i < calcNumBtns.length; i++) {
     calcNumBtns[i].addEventListener('click', updateDisplayVal, false);
 }
 
-for (let i=0; i < calcOperBtns.length; i++) {
-    calcOperBtns[i].addEventListener('click', updateDisplayVal, false);
+//iterates through all operator button variables to send value of button to calculator display
+/*for (let i=0; i < calcOperBtns.length; i++) {
+    calcOperBtns[i].addEventListener('click', performOperation, false);
+}*/
+
+//clears calculator screen and all previously entered operations
+clearBtn.onclick = () => {
+    displayVal = '0';
+    pendingVal = undefined;
+    evalStringArray = [];
+    displayValElement.innerHTML = displayVal;
 }
