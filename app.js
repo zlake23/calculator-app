@@ -43,3 +43,24 @@ clearBtn.onclick = () => {
     evalStringArray = [];
     displayValElement.innerHTML = displayVal;
 }
+
+
+//provides function to delete button to remove last index position of display value each button press
+deleteBtn.onclick = () => {
+    let lengthOfDisplayVal = displayVal.length;
+    displayVal = displayVal.slice(0, lengthOfDisplayVal - 1);
+    
+    if(displayVal === '') {
+        displayVal = '0';
+    }
+    
+    displayValElement.innerText= displayVal;
+}
+
+//provides function to decimal button to include decimal point only once in a number string
+decimalBtn.onclick = () => {
+    if(!displayVal.includes('.')) {
+        displayVal += '.';
+    }
+    displayValElement.innerText = displayVal;
+}
