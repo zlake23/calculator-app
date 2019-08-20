@@ -32,9 +32,57 @@ for (let i=0; i < calcNumBtns.length; i++) {
 }
 
 //iterates through all operator button variables to send value of button to calculator display
-/*for (let i=0; i < calcOperBtns.length; i++) {
+for (let i=0; i < calcOperBtns.length; i++) {
     calcOperBtns[i].addEventListener('click', performOperation, false);
-}*/
+}
+
+//uses switch statements to perform each operator function when button is pressed
+var performOperation = (clickObj) => {
+    var operator = clickObj.target.innerText;
+    switch (operator) {
+        case '+':
+            pendingVal = displayVal
+            displayVal = '0'
+            displayValElement.innerText = displayVal;
+            evalStringArray.push(pendingVal);
+            evalStringArray.push('+');
+            break;
+        case '-':
+            pendingVal = displayVal
+            displayVal = '0'
+            displayValElement.innerText = displayVal;
+            evalStringArray.push(pendingVal);
+            evalStringArray.push('-');
+            break;
+        case '÷':
+            pendingVal = displayVal
+            displayVal = '0'
+            displayValElement.innerText = displayVal;
+            evalStringArray.push(pendingVal);
+            evalStringArray.push('/');
+            break;
+         case '×':
+            pendingVal = displayVal
+            displayVal = '0'
+            displayValElement.innerText = displayVal;
+            evalStringArray.push(pendingVal);
+            evalStringArray.push('*');
+            break;
+
+            //gives function to equals button to evaluate given string of numbers and operators
+        case '=':
+            evalStringArray.push(displayVal);
+            var evaluation = eval(evalStringArray.join(' '));
+            dipslayVal = evaluation + '';
+            displayValElement.innerText = displayVal;
+            evalStringArray = [];
+            break;
+        default: 
+            break;
+    }
+}
+
+
 
 //clears calculator screen and all previously entered operations
 clearBtn.onclick = () => {
@@ -64,3 +112,4 @@ decimalBtn.onclick = () => {
     }
     displayValElement.innerText = displayVal;
 }
+
