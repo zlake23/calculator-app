@@ -1,64 +1,53 @@
-
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
-        <title>Calculator App</title>
-
+        <title>Crunch Some Numbers!</title>
+        <link rel="stylesheet" type="text/css" href="style.css";>
     </head>
 
     <body>
-        <div class="calculator">
-            <div class="calculator-frame">
-                <div class="screen-frame">
-                    <div class="screen-input">0</div>
-                </div>    
-                        <div class="content-row">
-                            <div class="calc-brand">ZEEKSTER-WEB LABS</div>
-                            <button class="calc-on">ON/OFF</button>
-                        </div>
-                            <div class="content-row">
-                                <button class="clear-button">Delete</button>
-                                <button class="clear-all-button">Clear All</button>
-                            </div> 
-                            <div class="content-row">
-                                <button class="number">7</button>
-                                <button class="number">8</button>
-                                <button class="number">9</button>
-                                <button class="operator">*</button>
-                            </div>
-                            <div class="content-row">
-                                <button class="number">4</button>
-                                <button class="number">5</button>
-                                <button class="number">6</button>
-                                <button class="operator">/</button>
-                            </div>
-                            <div class="content-row">
-                                <button class="number">1</button>
-                                <button class="number">2</button>
-                                <button class="number">3</button>
-                                <button class="operator">-</button>
-                            </div>
-                            <div class="content-row">
-                                <button class="operator">.</button>
-                                <button class="number">0</button>
-                                <button class="operator">=</button>
-                                <button class="operator">+</button>
-                            </div>
-                        
-                        
-            </div>    
+        <div id="calc-frame">
+            <div class="row">
+                <div class="column" id="calc-display-val">0</div>
+            </div>
+
+            <div class="row">
+                <div class="calc-btn column" id="calc-clear">AC</div>
+                <div class="calc-btn column" id="calc-delete">Del</div>
+                <div class="calc-btn operator-btn column" id="oper-divide">&divide</div>
+            </div>
+
+            <div class="row">
+                <div class="calc-btn number-btn column" id="num-seven">7</div>
+                <div class="calc-btn number-btn column" id="num-eight">8</div>
+                <div class="calc-btn number-btn column" id="num-nine">9</div>
+                <div class="calc-btn operator-btn column" id="oper-multiply">&times</div>
+            </div>
+
+            <div class="row">
+                <div class="calc-btn number-btn column" id="num-four">4</div>
+                <div class="calc-btn number-btn column" id="num-five">5</div>
+                <div class="calc-btn number-btn column" id="num-six">6</div>
+                <div class="calc-btn operator-btn column" id="oper-subtract">-</div>
+            </div>
+
+            <div class="row">
+                <div class="calc-btn number-btn column" id="num-one">1</div>
+                <div class="calc-btn number-btn column" id="num-two">2</div>
+                <div class="calc-btn number-btn column" id="num-three">3</div>
+                <div class="calc-btn operator-btn column" id="oper-add">+</div>
+            </div>
+
+            <div class="row">
+                <div class="calc-btn number-btn column" id="num-zero">0</div>
+                <div class="calc-btn column" id="calc-decimal">.</div>
+                <div class="calc-btn operator-btn column" id="equals">=</div>
+            </div>
+
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script type="text/javascript" src="app.js"></script>
+
+        <script>
+            
+        </script>
     </body>
-
-    <footer>
-
-
-
-    </footer>
-    
 </html>
-
-
