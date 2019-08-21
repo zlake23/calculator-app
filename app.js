@@ -10,13 +10,13 @@ var displayValElement = document.getElementById('calc-display-val');
 
 //sets initial values to begin calculations
 var displayVal = '0';
-var pendingVal;
+var pendingVals;
 var evalStringArray = [];
 
 
 //updates calculator screen each time button is clicked to display value
-var updateDisplayVal = (clickBtn) => {
-    var btnText = clickBtn.target.innerText;
+var updateDisplayVal = (clickObj) => {
+    var btnText = clickObj.target.innerText;
 
     if(displayVal === '0') {
         displayVal = '';
@@ -31,39 +31,35 @@ for (let i=0; i < calcNumBtns.length; i++) {
     calcNumBtns[i].addEventListener('click', updateDisplayVal, false);
 }
 
-//iterates through all operator button variables to send value of button to calculator display
-for (let i=0; i < calcOperBtns.length; i++) {
-    calcOperBtns[i].addEventListener('click', performOperation, false);
-}
-
 //uses switch statements to perform each operator function when button is pressed
 var performOperation = (clickObj) => {
     var operator = clickObj.target.innerText;
+    
     switch (operator) {
         case '+':
-            pendingVal = displayVal
-            displayVal = '0'
+            pendingVal = displayVal;
+            displayVal = '0';
             displayValElement.innerText = displayVal;
             evalStringArray.push(pendingVal);
             evalStringArray.push('+');
             break;
         case '-':
-            pendingVal = displayVal
-            displayVal = '0'
+            pendingVal = displayVal;
+            displayVal = '0';
             displayValElement.innerText = displayVal;
             evalStringArray.push(pendingVal);
             evalStringArray.push('-');
             break;
         case '÷':
-            pendingVal = displayVal
-            displayVal = '0'
+            pendingVal = displayVal;
+            displayVal = '0';
             displayValElement.innerText = displayVal;
             evalStringArray.push(pendingVal);
             evalStringArray.push('/');
             break;
-         case '×':
-            pendingVal = displayVal
-            displayVal = '0'
+         case 'x':
+            pendingVal = displayVal;
+            displayVal = '0';
             displayValElement.innerText = displayVal;
             evalStringArray.push(pendingVal);
             evalStringArray.push('*');
@@ -73,7 +69,7 @@ var performOperation = (clickObj) => {
         case '=':
             evalStringArray.push(displayVal);
             var evaluation = eval(evalStringArray.join(' '));
-            dipslayVal = evaluation + '';
+            displayVal = evaluation + '';
             displayValElement.innerText = displayVal;
             evalStringArray = [];
             break;
@@ -82,6 +78,11 @@ var performOperation = (clickObj) => {
     }
 }
 
+
+//iterates through all operator button variables to send value of button to calculator display
+for (let i=0; i < calcOperBtns.length; i++) {
+    calcOperBtns[i].addEventListener('click', performOperation, false);
+}
 
 
 //clears calculator screen and all previously entered operations
